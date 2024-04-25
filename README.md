@@ -189,6 +189,8 @@ Gold	|9568	|9.87|
 Regular|	58316|	60.18|
 Silver	|29026|	29.95|
 
+The majority of customers fall into the Regular category, comprising 60.18% of the total customer base. Silver customers represent the next largest group at 29.95%, followed by Gold customers at 9.87%.
+
 - How does loyalty status relate to purchase frequency, purchase amount, and product category preferences?
 ```sql
 SELECT 
