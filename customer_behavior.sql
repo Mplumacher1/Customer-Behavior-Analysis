@@ -42,10 +42,19 @@ FROM customer
 GROUP BY gender;
 
 -- Income --
-SELECT income, COUNT(*) AS count
+SELECT 
+    CASE 
+        WHEN income < 30000 THEN 'Low Income'
+        WHEN income BETWEEN 30000 AND 60000 THEN 'Medium Income'
+        ELSE 'High Income'
+    END AS income_level,
+    COUNT(*) AS num_customers,
+    AVG(purchase_freq) AS avg_purchase_frequency,
+    AVG(purchase_amount) AS avg_purchase_amount,
+    AVG(satisfaction) AS avg_satisfaction_score
 FROM customer
-GROUP BY income
-ORDER BY income;
+GROUP BY income_level
+ORDER BY income_level;
 
 -- Education --
 SELECT education, COUNT(*) AS count
@@ -54,8 +63,9 @@ GROUP BY education;
 
 -- How does customer age correlate with purchase frequency and amount?
 
-SELECT age,COUNT(purchase_amount) AS number_of_purchases, purchase_freq
+SELECT DISTINCT age,COUNT(purchase_amount) AS number_of_purchases, purchase_freq
 FROM customer
+WHERE age BETWEEN 25 AND 40
 GROUP BY age, purchase_freq
 ORDER BY age;
 
