@@ -79,6 +79,8 @@ income_level | num_customers | avg_purchase_frequency | avg_purchase_amount | av
 Low Income |	53601|	0|	6115.0399	|5.0052|
 Medium Income|	43309	|0	|13992.2321|	5.0137|
 
+The average purchase frequency seems to be zero for both income levels. This could suggest that either there is no data available for purchase frequency, or these customers do not make regular purchases. This data suggests that while "Medium Income" customers spend more per purchase on average, satisfaction levels are generally high across both income groups. However, it's worth exploring why the purchase frequency is reported as zero and how it correlates with satisfaction and purchase amount. Both income groups have relatively high average satisfaction scores, with "Medium Income" customers having a slightly higher score (5.0137) compared to "Low Income" customers (5.0052). "Medium Income" customers have a substantially higher average purchase amount (13,992.2321) compared to "Low Income" customers (6,115.0399). This indicates that customers with higher income levels tend to spend more on average per purchase.
+
 ```sql
 SELECT education, COUNT(*) AS count
 FROM customer
@@ -150,6 +152,8 @@ age | number_of_purchases | purchase_freq|
 40	|213|occasional|
 40	|297	|rare|
 
+Generally, as age increases, the number of purchases tends to decrease, which is expected as people might have more financial responsibilities or different spending priorities as they get older. Younger age groups (25-30) tend to have a higher proportion of frequent purchasers compared to older age groups (31-40). This could indicate different lifestyle patterns and spending habits among age groups.
+
 - Is there a pattern in purchase behavior based on customer region or income level?
 ```sql
 SELECT region, 
@@ -162,7 +166,7 @@ GROUP BY region;
 ```
 region | customer_count | total_purchase_amount | avg_purchase_amount | unique_customers|
 -------|---------------|-----------------------|---------------------|------------------|
-East	|29159	280373013|	9615.3165|	29159|
+East	|29159	|280373013|	9615.3165|	29159|
 North	|19293	|186741054	|9679.2129	|19293|
 South	|19404|	187248309	|9649.9850	|19404|
 West|	29054|	279399457|	9616.5573	|29054|
