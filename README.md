@@ -171,6 +171,8 @@ North	|19293	|186741054	|9679.2129	|19293|
 South	|19404|	187248309	|9649.9850	|19404|
 West|	29054|	279399457|	9616.5573	|29054|
 
+Similar to the previous dataset, there isn't a significant difference in average purchase amount or total purchase amount among the regions. This suggests consistent purchasing behaviors across regions. The customer counts across regions remain consistent with the previous dataset, indicating stability in market presence across different regions.
+
 
 # Loyalty and Engagement:
 - What percentage of customers fall into different loyalty status categories (e.g., loyal, occasional, new)?
