@@ -249,6 +249,8 @@ Young	|Gold	|0.2965	|9677.1213|
 Young	|Regular	|0.2974|	9620.1100|
 Young|Silver|	0.3015|	9640.5249|
 
+Middle-aged customers seem to have slightly higher average spending across all membership tiers compared to young customers. There's a variation in spending across different membership tiers within each age group. For instance, Gold members generally spend more on average compared to Regular or Silver members within the same age group. The average spending within each age group doesn't vary significantly across different membership tiers. This indicates that while membership tiers do influence spending to some extent, age might be a stronger determinant of spending habits.
+
 - What is the effectiveness of promotions in terms of increasing purchase frequency and amount?
 ```sql
 SELECT promotion_usage, purchase_freq, purchase_amount
@@ -268,6 +270,8 @@ promotion_usage|purchase_freq|purchase_amount|
 1	|frequent|	12633|
 1	|occasional|	12137|
 1	|occasional	|2080|
+
+There seems to be a correlation between promotion usage and purchase frequency. Occasional and frequent promotion usage appears to be associated with higher purchase frequencies compared to rare usage. The data suggests that promotions, especially occasional and frequent ones, can influence customers to make purchases more often. However, to understand the full impact of promotions on overall sales and profitability, it's crucial to consider factors like the cost of promotions and the potential for cannibalization of regular sales. 
 
 # Customer Satisfaction:
 - What is the overall satisfaction score distribution among customers?
